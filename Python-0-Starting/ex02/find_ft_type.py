@@ -1,9 +1,8 @@
-def all_thing_is_obj(obj: any = None) -> None:
-    if obj is not None:
-        obj_type = type(obj).__name__.capitalize()
-        if isinstance(obj, str):
-            print(f"{obj} is in the kitchen : <class '{obj_type.lower()}'>")
-        else:
-            print(f"{obj_type} \t: {type(obj)}")
-    else:
+def all_thing_is_obj(object: any = None) -> int:
+    if object is None:
         print("Type not found")
+    elif isinstance(object, str):
+        print(f"{object} is in the kitchen : <class 'str'>")
+    else:
+        print(f"{type(object).__name__.capitalize()} : {type(object)}")
+    return 42
